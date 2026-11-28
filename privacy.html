@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0b0f17" />
 <title>XLTab — Privacy Policy</title>
-<meta name="description" content="XLTab privacy policy: all files are processed locally on your device. No data is collected, transmitted, or shared." />
+<meta name="description" content="XLTab processes spreadsheet files locally. No personal data collection, analytics, telemetry, account, cloud sync, or network access." />
 <link rel="canonical" href="https://nkunal1992.github.io/XLTab-site/privacy.html" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/site.css" />
 </head>
@@ -24,15 +26,15 @@
   </div>
 </div></nav>
 
-<main id="main" class="wrap" style="max-width:820px">
+<main id="main" class="wrap legal" style="max-width:820px">
   <h1>Privacy Policy</h1>
-  <p class="lead">Effective date: 25 November 2026</p>
+  <p class="lead">Effective date: 28 November 2026</p>
 
   <h2>The short version</h2>
-  <p>XLTab processes every file locally on your device. It collects no personal data, transmits nothing, contains no analytics or telemetry, and makes no network connections.</p>
+  <p>XLTab processes spreadsheet files locally on your device. It collects no personal data, transmits nothing, contains no analytics or telemetry, requires no account, and makes no network connections.</p>
 
   <h2>What XLTab does</h2>
-  <p>XLTab is a spreadsheet workspace. It reads and writes spreadsheet files (.xlsx, .xlsm, .csv) that you explicitly open or save. All processing happens entirely on your device.</p>
+  <p>XLTab is a spreadsheet workspace. It reads and writes spreadsheet files that you explicitly open or save. When you use workspace search, it scans only the root folder or spreadsheet file you explicitly choose, and only when you start the search.</p>
 
   <h2>What XLTab does not do</h2>
   <ul>
@@ -40,26 +42,27 @@
     <li>No analytics, telemetry, crash reporting or diagnostic upload</li>
     <li>No accounts, sign-in, or registration</li>
     <li>No network requests of any kind — the app works fully offline</li>
-    <li>No advertising, tracking, or third-party SDKs</li>
-    <li>No access to your files beyond the ones you open</li>
+    <li>No advertising, tracking, or third-party analytics SDKs</li>
+    <li>No background indexing or scanning of your drive</li>
+    <li>No access to files or folders beyond the ones you explicitly open or select for a workspace/search</li>
   </ul>
 
   <h2>File access</h2>
-  <p>The app opens only the files and folders you choose through the open dialog, drag-and-drop, or Windows file associations. Nothing is scanned, indexed, or uploaded in the background.</p>
+  <p>The app opens only the files and folders you choose through the open dialog, drag-and-drop, file associations, folder workspace selection, or workspace-search root selection. Workspace search is an on-demand local scan; it is not a background indexer and results are not uploaded anywhere.</p>
 
   <h2>Data storage</h2>
-  <p>XLTab stores no data outside the files you save yourself. There is no cloud sync — your spreadsheets remain exactly where you keep them.</p>
+  <p>XLTab stores no spreadsheet content outside the files you save yourself. Workspace-search caching is in-memory, local to the running app, and keyed to file path, size, and modification time so unchanged files can be refined faster. There is no cloud sync — your spreadsheets remain exactly where you keep them.</p>
 
   <h2>Changes</h2>
   <p>If this policy ever changes, the change will be published on this page before the corresponding app update ships.</p>
 
   <h2>Contact</h2>
-  <p>Questions: open an issue or discussion via the links on <a href="https://github.com/nkunal1992">github.com/nkunal1992</a>.</p>
+  <p>Questions: open an issue in the <a href="https://github.com/nkunal1992/XLTab/issues">XLTab GitHub repository</a>.</p>
 </main>
 
 <footer><div class="wrap">
   <span>XLTab — built by <a href="https://github.com/nkunal1992">Narayan Kunal</a></span>
-  <span class="flinks"><a href="features.html">Features</a> · <a href="index.html">Home</a></span>
+  <span class="flinks"><a href="features.html">Features</a> · <a href="index.html">Home</a> · <a href="https://github.com/nkunal1992/XLTab/issues">Support</a></span>
 </div></footer>
 <script src="assets/site.js"></script>
 </body>

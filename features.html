@@ -3,10 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>XLTab — Features</title>
-<meta name="description" content="XLTab features: blank workbook creation, tabbed workbooks, cross-workbook search, workbook diff, folder workspaces, filtering, formulas, cleanup, combine/split, sheet management, advanced selection, and conversion tools. Free and offline." />
+<meta name="theme-color" content="#0b0f17" />
+<title>XLTab Features — Root-folder search, tabs, diff, formulas</title>
+<meta name="description" content="Search spreadsheets under any root folder without opening them. Preview matches, jump to exact cells, edit in tabs, diff workbooks, and use offline power tools." />
 <link rel="canonical" href="https://nkunal1992.github.io/XLTab-site/features.html" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta property="og:title" content="XLTab features — search before you open" />
+<meta property="og:description" content="Root-folder spreadsheet search, tabbed editing, workbook diff, filters, formulas and offline power tools." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="XLTab" />
+<meta property="og:url" content="https://nkunal1992.github.io/XLTab-site/features.html" />
+<meta property="og:image" content="https://nkunal1992.github.io/XLTab-site/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/site.css" />
 </head>
@@ -24,80 +35,134 @@
   </div>
 </div></nav>
 
+<div class="subnav"><div class="wrap">
+  <a href="#workspace-search">Root-folder search</a>
+  <a href="#open-search">Open-workbook search</a>
+  <a href="#diff">Diff</a>
+  <a href="#folder">Folder workspaces</a>
+  <a href="#filter">Filter &amp; sort</a>
+  <a href="#formulas">Create &amp; calculate</a>
+  <a href="#power-tools">Power tools</a>
+  <a href="#honest-limits">Limits</a>
+</div></div>
+
 <main id="main" class="wrap">
 
 <header class="hero" style="padding-bottom:20px">
   <p class="eyebrow">Features</p>
-  <h1>Excel for editing. <span class="grad">Beyond Excel</span> for everything else.</h1>
-  <p class="lead">Start blank with <b>New</b> or <b>Ctrl+N</b>, edit immediately, and save as a standard .xlsx wherever you choose. Every capability below is in the shipping app — no roadmap promises.</p>
+  <h1>Search first. <span class="grad">Open exactly what you need.</span></h1>
+  <p class="lead">Every capability below is in the shipping app — no roadmap promises. Start blank with <b>New</b> or <b>Ctrl+N</b>, open existing spreadsheets as tabs, or scan an entire root folder before opening anything at all.</p>
+  <div class="hero-cta" style="margin-top:24px">
+    <a class="cta-win" href="https://apps.microsoft.com/detail/9N1TDMMXJTDV"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" width="190" height="52" /></a>
+    <a class="more" href="#workspace-search">Start with root-folder search →</a>
+  </div>
 </header>
 
-<section id="search">
+<section id="workspace-search" class="feat">
   <div class="row">
-    <div>
-      <p class="eyebrow">The headline</p>
+    <div class="copy">
+      <p class="num">01 · Workspace search</p>
+      <h2>Search a root folder without opening a single workbook</h2>
+      <p class="lead">Choose <b>Tools → Search across files…</b>, paste or browse to any root folder or spreadsheet file, and scan recursively. You do not need to open a folder workspace first.</p>
+      <ul>
+        <li><b>Independent root path</b> — paste a path, browse for a folder, use a recent root, or reuse the current workspace root.</li>
+        <li><b>Useful search controls</b> — query text, values or formula fragments; optional case-sensitive and regex modes; file patterns such as <code>*.xlsx; reports/**</code>.</li>
+        <li><b>Streams instead of freezing</b> — progress, partial results and cancellation stay responsive across hundreds of files.</li>
+        <li><b>Grouped evidence</b> — file and folder hierarchy, per-sheet counts, cell references, formula markers and highlighted matched text.</li>
+        <li><b>Preview before opening</b> — inline row context keeps the real header row visible and highlights the hit cell.</li>
+        <li><b>Open only the answer</b> — clicking a hit lazily opens that workbook at the exact sheet and cell; an already-open workbook is activated instead of duplicated.</li>
+        <li><b>Fast refinement</b> — unchanged files are cached by path, size and modification time, and results can be exported as an xlsx evidence file.</li>
+      </ul>
+    </div>
+    <div class="media-stack">
+      <figure class="frame"><img src="assets/p/workspace-search-setup.png" width="2800" height="1718" loading="lazy" decoding="async" alt="The XLTab Search across files dialog with an independent root folder path, file pattern filter, regex option and streamed grouped results" /></figure>
+      <figure class="frame"><img src="assets/p/workspace-search.png" width="2800" height="1718" loading="lazy" decoding="async" alt="Workspace search results grouped by file and sheet, with inline row previews and the selected workbook open at the matching cell" /></figure>
+    </div>
+  </div>
+</section>
+
+<section id="open-search" class="feat">
+  <div class="row flip">
+    <div class="copy">
+      <p class="num">02 · Open-workbook search</p>
       <h2>Search every open workbook at once</h2>
-      <p>Type in the search box and XLTab searches values — and optionally formula text — across <em>every open workbook and every sheet</em>, live as you type. Results group by file and sheet. Every matched cell gets a highlight overlay, correct per sheet. Click a result and you jump straight there: right tab, right sheet, right cell, scrolled into view.</p>
-      <div class="facts">
-        <span class="fact">Regex &amp; case-sensitive modes</span>
-        <span class="fact">Formula-text search (fx)</span>
-        <span class="fact">Cross-workbook replace</span>
-      </div>
+      <p class="lead">The top search bar is deliberately separate: it searches the workbooks you already have open, live as you type. Use workspace search for unopened files; use open-workbook search for the tabs in front of you.</p>
+      <ul>
+        <li>Results group by workbook and sheet, then jump to the exact tab, sheet and cell.</li>
+        <li>Every matched cell can be highlighted, with per-sheet hit badges.</li>
+        <li>Regex, case-sensitive and formula-text modes are available.</li>
+        <li>Cross-workbook replace is available directly from the results panel.</li>
+      </ul>
     </div>
-    <figure class="frame"><img src="assets/p/search.png" width="1280" height="758" alt="Global search results grouped by workbook and sheet" /></figure>
+    <figure class="frame"><img src="assets/p/search.png" width="2800" height="1718" loading="lazy" decoding="async" alt="XLTab top-bar search results grouped across open workbooks and sheets" /></figure>
   </div>
 </section>
 
-<section id="diff">
-  <div class="row rev">
-    <div>
-      <p class="eyebrow">Impossible in Excel</p>
+<section id="diff" class="feat">
+  <div class="row">
+    <div class="copy">
+      <p class="num">03 · Workbook diff</p>
       <h2>Diff two workbooks cell-by-cell</h2>
-      <p>Pick any two open tabs and XLTab compares them: sheets matched by name, cells classified as added, removed, or changed — values and formulas both. Color-coded like a code diff, with counts per sheet. Perfect for "what changed between the version I sent and the one that came back?"</p>
+      <p class="lead">Pick any two open tabs and XLTab compares them: sheets matched by name, cells classified as added, removed, or changed — values and formulas both. Color-coded like a code diff, with counts per sheet.</p>
+      <ul>
+        <li>Answer “what changed between the version I sent and the one that came back?”</li>
+        <li>Navigate directly to differing cells instead of scanning sheet by sheet.</li>
+        <li>Use it after root-folder search has identified the candidate files.</li>
+      </ul>
     </div>
-    <figure class="frame"><img src="assets/p/diff.png" width="1280" height="758" alt="Diff view with color-coded added, removed and changed cells" /></figure>
+    <figure class="frame"><img src="assets/p/diff.png" width="2800" height="1718" loading="lazy" decoding="async" alt="XLTab diff view with color-coded added, removed and changed cells" /></figure>
   </div>
 </section>
 
-<section id="folder">
+<section id="folder" class="feat">
+  <div class="row flip">
+    <div class="copy">
+      <p class="num">04 · Folder workspaces</p>
+      <h2>Open a folder when you want a working set</h2>
+      <p class="lead">Point XLTab at a folder and it scans recursively for spreadsheets — preserving your directory structure in a sidebar tree, skipping Excel lock files and non-spreadsheets. Files load lazily when clicked, or open them all as tabs at once.</p>
+      <ul>
+        <li>Use a folder workspace when you will browse, compare or edit a related set of files.</li>
+        <li>Use <b>Search across files…</b> instead when you only need to find answers without opening the set.</li>
+        <li>The two workflows complement each other: workspace search can reuse the current workspace root.</li>
+      </ul>
+    </div>
+    <figure class="frame"><img src="assets/p/folder.png" width="2800" height="1718" loading="lazy" decoding="async" alt="XLTab folder workspace tree in the sidebar with nested directories" /></figure>
+  </div>
+</section>
+
+<section id="filter" class="feat">
   <div class="row">
-    <div>
-      <p class="eyebrow">Workspace thinking</p>
-      <h2>Open a folder, get a workspace</h2>
-      <p>Point XLTab at a folder and it scans recursively for spreadsheets — preserving your directory structure in a sidebar tree, skipping Excel lock files and non-spreadsheets. Files load lazily when clicked, or open them all as tabs at once. Combined with global search, you can search an entire project folder's worth of spreadsheets in one keystroke.</p>
-    </div>
-    <figure class="frame"><img src="assets/p/folder.png" width="1280" height="758" alt="Folder workspace tree in the sidebar" /></figure>
-  </div>
-</section>
-
-<section id="filter">
-  <div class="row rev">
-    <div>
-      <p class="eyebrow">The essentials, done right</p>
+    <div class="copy">
+      <p class="num">05 · Everyday essentials</p>
       <h2>Filter, sort, validate — like you expect</h2>
-      <p>Column filter dropdowns work the way you know from Excel, and files that already have autofilters open with them active — and keep them when saved. Sorting, conditional formatting, data validation dropdowns, freeze panes, merged cells, number formats and styles all included.</p>
-      <div class="facts">
-        <span class="fact">Autofilter round-trips</span>
-        <span class="fact">Conditional formatting</span>
-        <span class="fact">Data validation</span>
-      </div>
+      <p class="lead">Column filter dropdowns work the way you know from Excel, and files that already have autofilters open with them active — and keep them when saved. Sorting, conditional formatting, data validation dropdowns, freeze panes, merged cells, number formats and styles are included.</p>
+      <ul>
+        <li>Autofilter round-trips through save.</li>
+        <li>Conditional formatting and data validation are preserved.</li>
+        <li>Search hits hidden by saved Excel filters are revealed when you jump to them.</li>
+      </ul>
     </div>
-    <figure class="frame"><img src="assets/p/filter.png" width="1280" height="758" alt="Column filter dropdowns filtering rows" /></figure>
+    <figure class="frame"><img src="assets/p/filter.png" width="2800" height="1718" loading="lazy" decoding="async" alt="XLTab column filter dropdowns filtering rows" /></figure>
   </div>
 </section>
 
-<section id="formulas">
-  <div class="row">
-    <div>
-      <p class="eyebrow">Real formulas</p>
-      <h2>Formulas that compute — and survive</h2>
-      <p>A live formula engine recalculates as you edit: SUM, VLOOKUP, XLOOKUP, SUMIFS, INDEX/MATCH, IF chains, cross-sheet references — hundreds of functions. Formulas are stored as standard Excel formulas, so a file you edit in XLTab recalculates identically when opened in Excel.</p>
+<section id="formulas" class="feat">
+  <div class="row flip">
+    <div class="copy">
+      <p class="num">06 · Create &amp; calculate</p>
+      <h2>Start blank, edit immediately, save as xlsx</h2>
+      <p class="lead">Click <b>New</b> or press <b>Ctrl+N</b> to create a blank workbook with a ready-to-edit Sheet1. Save chooses the destination and writes a standard .xlsx file. Existing workbooks open as editable tabs with live formula recalculation.</p>
+      <ul>
+        <li>SUM, VLOOKUP, XLOOKUP, SUMIFS, INDEX/MATCH, IF chains and cross-sheet references recalculate as you edit.</li>
+        <li>Formulas are stored as standard Excel formulas, including modern-function preservation.</li>
+        <li>Formatting, merged cells, freeze panes, number formats and sheet structure round-trip through save.</li>
+      </ul>
     </div>
-    <figure class="frame"><img src="assets/p/hero.png" width="1280" height="758" alt="Spreadsheet with live formulas computing revenue columns" /></figure>
+    <figure class="frame"><img src="assets/p/hero.png" width="2800" height="1718" loading="lazy" decoding="async" alt="XLTab workbook canvas with the New button, tab strip, formula controls and spreadsheet data visible" /></figure>
   </div>
 </section>
 
-<section id="power-tools">
+<section id="power-tools" class="feat">
   <div class="sec-head center">
     <p class="eyebrow">Power tools</p>
     <h2>Batch spreadsheet work, without the cluttered ribbon</h2>
@@ -115,11 +180,11 @@
   </div>
 </section>
 
-<section id="honest-limits" class="center">
+<section id="honest-limits" class="center feat">
   <div class="band">
     <p class="eyebrow">Honest limits</p>
     <h2>What XLTab doesn't do</h2>
-    <p class="lead" style="margin:14px auto 0">Pivot tables, charts, macros/VBA, Power Query, printing, and legacy binary .xls files. If your workbooks are data + formulas + formatting, XLTab is home. If they run on pivots and macros, use it alongside Excel — as the layer that searches and compares across everything.</p>
+    <p class="lead" style="margin:14px auto 0">Pivot tables, charts, macros/VBA, Power Query, printing, and dependable legacy binary .xls editing. Workspace search can scan .xls content, but convert those files to .xlsx when you need to edit them. If your workbooks are data + formulas + formatting, XLTab is home. If they run on pivots and macros, use it alongside Excel — as the layer that searches and compares across everything.</p>
   </div>
 </section>
 
@@ -134,7 +199,7 @@
 
 <footer><div class="wrap">
   <span>XLTab — built by <a href="https://github.com/nkunal1992">Narayan Kunal</a></span>
-  <span class="flinks"><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></span>
+  <span class="flinks"><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="https://github.com/nkunal1992/XLTab/issues">Support</a></span>
 </div></footer>
 <script src="assets/site.js"></script>
 </body>
